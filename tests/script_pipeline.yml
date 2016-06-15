@@ -1,0 +1,10 @@
+---
+- job:
+    name: script-definition
+    project-type: pipeline
+    pipeline:
+      script: |
+        node('test') {
+          echo 'Hello world'
+        }
+      sandbox: true

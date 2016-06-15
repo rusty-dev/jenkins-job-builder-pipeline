@@ -15,7 +15,7 @@ setup(
     url='https://github.com/rusty-dev/jenkins-job-builder-pipeline',
     packages=['jjb_pipeline'],
     include_package_data=True,
-    install_requires=[],
+    install_requires=['jenkins-job-builder'],
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

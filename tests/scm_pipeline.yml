@@ -1,0 +1,15 @@
+---
+- job:
+    name: scm-definition
+    project-type: pipeline
+    pipeline:
+      scriptPath: repo/Jenkinsfile
+      scm:
+        - git:
+            branches:
+              - '*/maser'
+            local-branch: 'master'
+            url: '/local/repo'
+            basedir: 'repo'
+            skip-tag: true
+            wipe-workspace: false
