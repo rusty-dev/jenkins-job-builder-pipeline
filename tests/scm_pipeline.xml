@@ -37,7 +37,7 @@
       <localBranch>master</localBranch>
       <extensions/>
     </scm>
-    <scriptPath>Jenkinsfile</scriptPath>
+    <scriptPath>repo/Jenkinsfile</scriptPath>
   </definition>
   <actions/>
   <description>&lt;!-- Managed by Jenkins Job Builder --&gt;</description>

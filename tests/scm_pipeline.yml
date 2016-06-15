@@ -3,7 +3,7 @@
     name: scm-definition
     project-type: pipeline
     pipeline:
-      scriptPath: repo/Jenkinsfile
+      script-path: repo/Jenkinsfile
       scm:
         - git:
             branches:

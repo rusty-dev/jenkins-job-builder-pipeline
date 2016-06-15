@@ -28,7 +28,7 @@ Create a pipeline job loading pipeline script from SCM.
     name: example-scm-script
     project-type: pipeline
     pipeline:
-      scriptPath: subdir/Jenkinsfile # path to pipeline script definition, "Jenkinsfile" by default.
+      script-path: subdir/Jenkinsfile # path to pipeline script definition, "Jenkinsfile" by default.
       scm: # normal scm definitions
         - git:
             branches:
