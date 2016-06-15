@@ -15,7 +15,6 @@
   <concurrentBuild>false</concurrentBuild>
   <canRoam>true</canRoam>
   <properties/>
-  <views/>
   <scm class="hudson.scm.NullSCM"/>
   <publishers/>
   <buildWrappers/>
