@@ -9,7 +9,7 @@ class Pipeline(jenkins_jobs.modules.base.Base):
     component_type = 'pipeline'
     component_list_type = 'pipeline'
 
-    def gen_xml(self, parser, xml_parent, data):
+    def gen_xml(self, xml_parent, data):
         definition = data.get(self.component_type, {})
 
         scm_definition = 'scm' in definition
@@ -26,7 +26,7 @@ class Pipeline(jenkins_jobs.modules.base.Base):
 
         if scm_definition:
             scm_module = next(module for module in self.registry.modules if isinstance(module, SCM))
-            scm_module.gen_xml(parser, xml_definition, definition)
+            scm_module.gen_xml(xml_definition, definition)
             XML.SubElement(xml_definition, 'scriptPath').text = definition.get('script-path', 'Jenkinsfile')
         else:
             XML.SubElement(xml_definition, 'script').text = definition.get('script', '')
