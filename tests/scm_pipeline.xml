@@ -15,27 +15,23 @@
           <name>*/maser</name>
         </hudson.plugins.git.BranchSpec>
       </branches>
-      <excludedUsers/>
-      <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
       <disableSubmodules>false</disableSubmodules>
       <recursiveSubmodules>false</recursiveSubmodules>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-      <authorOrCommitter>false</authorOrCommitter>
-      <wipeOutWorkspace>false</wipeOutWorkspace>
-      <pruneBranches>false</pruneBranches>
       <remotePoll>false</remotePoll>
       <gitTool>Default</gitTool>
       <submoduleCfg class="list"/>
-      <relativeTargetDir>repo</relativeTargetDir>
       <reference/>
       <gitConfigName/>
       <gitConfigEmail/>
-      <skipTag>true</skipTag>
-      <scmName/>
-      <useShallowClone>false</useShallowClone>
-      <ignoreNotifyCommit>false</ignoreNotifyCommit>
-      <localBranch>master</localBranch>
-      <extensions/>
+      <extensions>
+        <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+          <relativeTargetDir>repo</relativeTargetDir>
+        </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+        <hudson.plugins.git.extensions.impl.LocalBranch>
+          <localBranch>master</localBranch>
+        </hudson.plugins.git.extensions.impl.LocalBranch>
+      </extensions>
     </scm>
     <scriptPath>repo/Jenkinsfile</scriptPath>
   </definition>
